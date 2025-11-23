@@ -18,6 +18,7 @@ def main(
         print(f"Добрый день, {name} {lastname}!")
     else:
         # Неформальное приветствие только с именем
+        # Обычный комментарий
         print(f"Привет, {name}!")
 
 if name == "main":
