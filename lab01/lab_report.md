@@ -269,6 +269,8 @@ gpg: Действительная подпись пользователя "UnLuc
 
 - Конфликты: успешно разрешены через rebase
 
+## Ссылки
 
 Ссылка на Gist: https://gist.github.com/UnLucky252/a62d1ded4da42376adcac11bfa344975
+
 Репозиторий проекта: https://github.com/UnLucky252/risks_labs
