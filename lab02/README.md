@@ -233,4 +233,12 @@ $ getfacl nmapres.txt
 
 ***
 
+## Ссылки
+
+Ссылка на Gist: https://gist.github.com/UnLucky252/e51fd9e53d7383127d388d1eb903eaaa
+
+Репозиторий проекта: https://github.com/UnLucky252/risks_labs
+
+***
+
 Copyright (c) 2025 Maksim Anisimov
