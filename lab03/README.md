@@ -4,14 +4,7 @@
 <a href="https://daringfireball.net/projects/markdown"><img src="https://img.shields.io/static/v1?logo=markdown&logoColor=fff&label=&message=Markdown&color=36393f&style=flat" alt="Markdown"></a> 
 <a href="https://symbl.cc/en/unicode-table"><img src="https://img.shields.io/static/v1?logo=unicode&logoColor=fff&label=&message=Unicode&color=36393f&style=flat" alt="Unicode"></a> 
 <a href="https://shields.io"><img src="https://img.shields.io/static/v1?logo=shieldsdotio&logoColor=fff&label=&message=Shields&color=36393f&style=flat" alt="Shields"></a>
-<a href="https://img.shields.io/badge/Risk_Analyze-2448a2"><img src="https://img.shields.io/badge/Course-Risk_Analysis-2448a2" alt= "RA"></a> <img src="https://img.shields.io/badge/AppSec-2448a2" alt= "RA"></a> <img src="https://img.shields.io/badge/Contributor-Шмаков_И._С.-8b9aff" alt="Contributor Badge"></a></div>
-
-***
-
-<br>Салют :wave:, </br>
-Данная лабораторная работа посвещена изучению `nmap` и как с ним работать. Эта лабораторная работа послужит подпоркой для старта в выявлении и определении уязвимостей на уровне сканера портов, что бы освоить базовые методы сканирования. 
-
-Для сдачи данной работы также будет требоваться ответить на дополнительыне вопросы по описанным темам.
+<a href="https://img.shields.io/badge/Risk_Analyze-2448a2"><img src="https://img.shields.io/badge/Course-Risk_Analysis-2448a2" alt= "RA"></a> <img src="https://img.shields.io/badge/AppSec-2448a2" alt= "RA"></a> <img src="https://img.shields.io/badge/Contributor-Анисимов_М._А.-8b9aff" alt="Contributor Badge"></a></div>
 
 ***
 
@@ -130,8 +123,8 @@ OS:CK=11AA%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
 
 ## Задание
 
-- [ ] 1. Опишите используемые методы по их назначению, как они функционируют и какие результаты могут дать для оценки. Используйте сноску из материалов выше по флагам команд.
-- [ ] 2. Выведите на терминале и проанализируйте следующие команды консоли
+- ✅ 1. Опишите используемые методы по их назначению, как они функционируют и какие результаты могут дать для оценки. Используйте сноску из материалов выше по флагам команд.
+- ✅ 2. Выведите на терминале и проанализируйте следующие команды консоли
 
 ```bash
 $ nmap localhost
@@ -167,29 +160,26 @@ $ nmap -sV -p 8080 --script vuln -oN ~/project/reports/nmapres_new.txt -oX ~/pro
 $ xsltproc ~/project/reports/nmapres_new.xml -o ~/project/reports/nmapres_new.html
 ```
 
-- [ ] 3. Используйте команду `tree` и выведите все вложенные файлы по директориям.
-- [ ] 4.Найдите IP сетевой карты `Ethernet`, которая соответствует вашей виртуальной машине используя `ifconfig` и выполните команду
+- ✅ 3. Используйте команду `tree` и выведите все вложенные файлы по директориям.
+- ✅ 4.Найдите IP сетевой карты `Ethernet`, которая соответствует вашей виртуальной машине используя `ifconfig` и выполните команду
 
 ```bash
 nmap -sP inet_addr
 ```
 
-- [ ] 5. Определите ОС, данные ssh, telnet  с помощью `nmap` и выведитео них информацию.
-- [ ] 6. Результаты из `nmapres_new.txt` надо перенести в `nmapres.txt` и оставить оба файла рядом в локальном репозитории. Желательно использовать `cp` в консоли через редактор.
-- [ ] 7. Оформить `README.md` по аналогии и использовать `shield`, etc.
-- [ ] 8. Составить `gist` отчет и отправить ссылку личным сообщением
+- ✅ 5. Определите ОС, данные ssh, telnet  с помощью `nmap` и выведитео них информацию.
+- ✅ 6. Результаты из `nmapres_new.txt` надо перенести в `nmapres.txt` и оставить оба файла рядом в локальном репозитории. Желательно использовать `cp` в консоли через редактор.
+- ✅ 7. Оформить `README.md` по аналогии и использовать `shield`, etc.
+- ✅ 8. Составить `gist` отчет и отправить ссылку личным сообщением
 
 ***
 
-## Links
+## Ссылки
 
-- [Markdown](https://stackedit.io)
-- [Gist](https://gist.github.com)
-- [nmap.org](https://nmap.org/book/port-scanning-options.html)
-- [nmap github](https://github.com/nmap/nmap?ysclid=mi7x8wdde7291330856)
-- [IANA](https://www.iana.org)
-- [GitHub CLI](https://cli.github.com)
+Ссылка на Gist: https://gist.github.com/UnLucky252/b23a2522b112ad3b5704b5527116c460
 
-Copyright (c) 2025 Elijah S Shmakov
+Репозиторий проекта: https://github.com/UnLucky252/risks_labs
 
-![Logo](../../assets/logotype/logo.jpg)
+***
+
+Copyright (c) 2025 Maksim Anisimov
