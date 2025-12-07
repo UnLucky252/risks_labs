@@ -1,17 +1,34 @@
+import pygame
 import sys
-import time
 
+pygame.init()
 
-def colorful_print(text):
-    colors = ["\033[91m", "\033[92m", "\033[93m", "\033[94m", "\033[95m"]
-    reset = "\033[0m"
-    for i, char in enumerate(text):
-        color = colors[i % len(colors)]
-        sys.stdout.write(color + char + reset)
-        sys.stdout.flush()
-        time.sleep(0.2)
-    print()
+# Устанавливаем размеры окна
+screen_width = 800
+screen_height = 600
+window_size = (screen_width, screen_height)
+screen = pygame.display.set_mode(window_size) # Создаем окно
+pygame.display.set_caption("Hello AppSec World")
 
+# Задаем цвет фона
+bg_color = (255, 255, 255)
+screen.fill(bg_color)
 
-if __name__ == "__main__":
-    colorful_print("hello appsec world")
+# Выводим текст на экран
+font = pygame.font.SysFont(None, 75)
+text = font.render("Hello appsec world!", True, (0, 255, 0))
+text_rect = text.get_rect()
+text_rect.center = (400, 300)
+screen.blit(text, text_rect)
+
+pygame.display.flip() # Обновляем экран
+
+# Главный цикл
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+pygame.quit()
+sys.exit()
