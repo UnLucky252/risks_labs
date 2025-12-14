@@ -49,21 +49,16 @@ def main(
     python hello.py Ivan
     python hello.py Ivan --lastname Petrov --formal
     python hello.py Anna -f
+    Говорит "Привет" пользователю, опционально используя фамилию и формальный стиль.
     """
-<<<<<<< HEAD
     if formal:
-        # Формальное приветствие с именем и фамилией
         print(f"Добрый день, {name} {lastname}!")
     else:
-        # Неформальное приветствие только с именем
-        # Обычный комментарий
         print(f"Привет, {name}!")
-=======
     app = GreetingApp()
     greeting = app.generate_greeting(name, lastname, formal)
     print(greeting)
 
->>>>>>> 7afcae8 (Refactor code to OOP style with better structure)
 
 if name == "main":
     typer.run(main)
