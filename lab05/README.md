@@ -4,14 +4,7 @@
 <a href="https://daringfireball.net/projects/markdown"><img src="https://img.shields.io/static/v1?logo=markdown&logoColor=fff&label=&message=Markdown&color=36393f&style=flat" alt="Markdown"></a> 
 <a href="https://symbl.cc/en/unicode-table"><img src="https://img.shields.io/static/v1?logo=unicode&logoColor=fff&label=&message=Unicode&color=36393f&style=flat" alt="Unicode"></a> 
 <a href="https://shields.io"><img src="https://img.shields.io/static/v1?logo=shieldsdotio&logoColor=fff&label=&message=Shields&color=36393f&style=flat" alt="Shields"></a>
-<a href="https://img.shields.io/badge/Risk_Analyze-2448a2"><img src="https://img.shields.io/badge/Course-Risk_Analysis-2448a2" alt= "RA"></a> <img src="https://img.shields.io/badge/AppSec-2448a2" alt= "RA"></a> <img src="https://img.shields.io/badge/Contributor-Шмаков_И._С.-8b9aff" alt="Contributor Badge"></a></div>
-
-***
-
-<br>Салют :wave:, </br>
-Данная лабораторная работа посвещена изучению Docker и как с ним работать. Эта лабораторная работа послужит подпоркой для старта в выявлении и определении уязвимостей на уровне сканирования контейнеров при сборке приложений. 
-
-Для сдачи данной работы также будет требоваться ответить на дополнительыне вопросы по описанным темам.
+<a href="https://img.shields.io/badge/Risk_Analyze-2448a2"><img src="https://img.shields.io/badge/Course-Risk_Analysis-2448a2" alt= "RA"></a> <img src="https://img.shields.io/badge/AppSec-2448a2" alt= "RA"></a> <img src="https://img.shields.io/badge/Contributor-Анисимов_М._А.-8b9aff" alt="Contributor Badge"></a></div>
 
 ***
 
@@ -88,14 +81,14 @@ $ docker container run d \
 
 ## Задание
 
-- [ ] 1. Поставьте `Docker` и `buildkit`
+- ✅ 1. Поставьте `Docker` и `buildkit`
 
 ```bash
 $ brew install buildkit
 $ brew install docker
 ```
 
-- [ ] 2. Перейдите в `source` и выведите на терминале, далее проанализируйте следующие команды консоли
+- ✅ 2. Перейдите в `source` и выведите на терминале, далее проанализируйте следующие команды консоли
 
 ```bash
 $ docker buildx build -t hellow-appsec-world .
@@ -106,8 +99,8 @@ $ docker save -o hello.tar hello-appsec-world
 $ docker load -i hello.tar
 $ docker load -i image.tar
 ```
-- [ ] 3. Откройте `Dockerfile` и сделайте его анализ. Сделайте `commit`
-- [ ] 4. Замените в `Dockerfile`значение скрипта на `python` тем, который вы сделали ранее в прошлых лабораторных работах. Вложите свой файл `python` в директорию. Сделайте анализ своего измененного `Dockerfile` и внесите изменения. Сделайте `commit`. 
+- ✅ 3. Откройте `Dockerfile` и сделайте его анализ. Сделайте `commit`
+- ✅ 4. Замените в `Dockerfile`значение скрипта на `python` тем, который вы сделали ранее в прошлых лабораторных работах. Вложите свой файл `python` в директорию. Сделайте анализ своего измененного `Dockerfile` и внесите изменения. Сделайте `commit`. 
 
 > Пример анализа по текущему `Dockerfile` в репозитории
 
@@ -137,7 +130,7 @@ ENV PYTHONUNBUFFERED=1
 CMD ["python", "hello.py"] 
 ```
 
-- [ ] 5. Выведите на терминале и проанализируйте следующие команды консоли. Сравните хеш сумму вашего архива с `image.tar` из репозитория, выведите на терминал.
+- ✅ 5. Выведите на терминале и проанализируйте следующие команды консоли. Сравните хеш сумму вашего архива с `image.tar` из репозитория, выведите на терминал.
 
 ```bash
 $ docker buildx build -t hellow-appsec-world .
@@ -151,15 +144,15 @@ $ docker load -i image.tar
 $ docker run hello-appsec-world
 ```
 
-- [ ] 6. Доработайте свой `python` скрипт подключаемыми библиотеками, далее их необходимо разместить в `requirements.txt`. Размещение библиотек в следующем формате:
+- ✅ 6. Доработайте свой `python` скрипт подключаемыми библиотеками, далее их необходимо разместить в `requirements.txt`. Размещение библиотек в следующем формате:
 
 ```
 flask==2.2.3
 requests==2.28.1
 ```
 
-- [ ] 7. Сделайте `commit`. Повторите сборку приложения по вашему `Dockerfile` для доработанного скрипта `python`. Сохраните `image` в виде .`tar` архива. Сделайте `commit`.
-- [ ] 8. Выведите на терминале и проанализируйте следующие команды консоли
+- ✅ 7. Сделайте `commit`. Повторите сборку приложения по вашему `Dockerfile` для доработанного скрипта `python`. Сохраните `image` в виде .`tar` архива. Сделайте `commit`.
+- ✅ 8. Выведите на терминале и проанализируйте следующие команды консоли
 
 ```bash
 $ docker login
@@ -174,26 +167,26 @@ $ docker container create --name second hello-appsec-world
 
 ``` 
 
-- [ ] 9. Выведите на терминале и проанализируйте в консоли процессы, которые запущены, владельцев по пользователям
+- ✅ 9. Выведите на терминале и проанализируйте в консоли процессы, которые запущены, владельцев по пользователям
 
 ```bash 
  $ docker container run -it ubuntu /bin/bash
 ``` 
  
-- [ ] 10. Выведите оба контейнера first и second на терминал
-- [ ] 11. Перейдите в основной корень `lab05` и выведите на терминале, и проанализируйте
+- ✅ 10. Выведите оба контейнера first и second на терминал
+- ✅ 11. Перейдите в основной корень `lab05` и выведите на терминале, и проанализируйте
 
 ```bash 
 $ docker-compose up --build
 ``` 
 
-- [ ] 12. Откройте соседнее окно терминала и и выведите на терминале
+- ✅ 12. Откройте соседнее окно терминала и и выведите на терминале
 
 ```bash 
 $ open -a "Google Chrome" http://localhost:8000
 ```
 
-- [ ] 13. Остановите работу `docker-compose`.
+- ✅ 13. Остановите работу `docker-compose`.
 
 ```bash 
 $ docker ps -a
@@ -203,19 +196,18 @@ $ docker images
 $ docker ps -q | xargs docker stop
 $ docker-compose down
 ```
-- [ ] 14. Доработайте `docker-compose` и скрипт, который вы подготовили ранее, что бы вы смогли воспроизвести шаги п.11 по п.13 с демонстрацией. Сделайте `commit`.
-- [ ] 15. Залейте изменения в свой удаленный репозиторий, проверьте историю `commit`.
-- [ ] 16. Подготовьте отчет `gist`.
- 
+- ✅ 14. Доработайте `docker-compose` и скрипт, который вы подготовили ранее, что бы вы смогли воспроизвести шаги п.11 по п.13 с демонстрацией. Сделайте `commit`.
+- ✅ 15. Залейте изменения в свой удаленный репозиторий, проверьте историю `commit`.
+- ✅ 16. Подготовьте отчет `gist`.
+
 ***
 
-## Links
+## Ссылки
 
-- [Docker](https://docs.docker.com/)
-- [Markdown](https://stackedit.io)
-- [Gist](https://gist.github.com)
-- [GitHub CLI](https://cli.github.com)
+Ссылка на Gist: https://gist.github.com/UnLucky252/d54700227744459c50c77eed1f3f11ae
 
-Copyright (c) 2025 Elijah S Shmakov
+Репозиторий проекта: https://github.com/UnLucky252/risks_labs
 
-![Logo](../../assets/logotype/logo.jpg)
+***
+
+Copyright (c) 2025 Maksim Anisimov
