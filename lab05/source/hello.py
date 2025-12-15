@@ -1,34 +1,36 @@
 import pygame
+import os
 import sys
 
-pygame.init()
+# Установка dummy драйвера для работы без дисплея
+os.environ['SDL_VIDEODRIVER'] = 'dummy'
 
-# Устанавливаем размеры окна
-screen_width = 800
-screen_height = 600
-window_size = (screen_width, screen_height)
-screen = pygame.display.set_mode(window_size) # Создаем окно
-pygame.display.set_caption("Hello AppSec World")
+def main():
+    pygame.init()
+    
+    # Создаем поверхность в памяти (без окна)
+    screen = pygame.Surface((800, 600))
+    
+    # Заливаем фон
+    screen.fill((255, 255, 255))
+    
+    # Создаем текст
+    try:
+        font = pygame.font.Font(None, 75)
+    except:
+        font = pygame.font.SysFont(None, 75)
+    
+    text = font.render("Hello AppSec World!", True, (0, 255, 0))
+    text_rect = text.get_rect(center=(400, 300))
+    screen.blit(text, text_rect)
+    
+    # Сохраняем результат в файл
+    pygame.image.save(screen, "output.png")
+    print("✅ Изображение сохранено как 'output.png'")
+    print("🎮 Pygame инициализирован успешно")
+    print("👋 Hello AppSec World!")
+    
+    pygame.quit()
 
-# Задаем цвет фона
-bg_color = (255, 255, 255)
-screen.fill(bg_color)
-
-# Выводим текст на экран
-font = pygame.font.SysFont(None, 75)
-text = font.render("Hello appsec world!", True, (0, 255, 0))
-text_rect = text.get_rect()
-text_rect.center = (400, 300)
-screen.blit(text, text_rect)
-
-pygame.display.flip() # Обновляем экран
-
-# Главный цикл
-running = True
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-pygame.quit()
-sys.exit()
+if __name__ == "main":
+    main()
